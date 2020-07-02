@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <!--ESTILOS - CSS-->
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid #ccc;
+        }
+        th{
+            background: #444;
+            color: #fff;
+        }
+        td, th{
+            text-align: center;
+            padding: .4em;
+        }
+    </style>
+    <!--FIN ESTILOS - CSS-->
+</head>
+<body>
+    <table border="1">
+
+        <!--CAPTION: Define un titulo de la tabla - siempre debe ir despues de la etiqueta <table>-->
+        <caption>Mi horario de clases</caption>
+
+        <colgroup> <!--Especifica un grupo de una omas columnas en una tabla, es util para aplicar estilos, para no repetir los estilos por cada celda de cada fila-->
+            <!--Siempre debe de ir en un table, despues de un caption y antes de de cualquier elemento thead, tbody, tfoot, tr. -->
+
+            <col span="4"> <!--COL: Esta etiqueta especifica las propiedades de columna para cada columna dentro de un elemnto <colgroup>. -->
+            <col style="background: red;">
+        </colgroup>
+
+        <!--PARA USAR THEAD DEBEMOS USAR TBODY-->
+        <thead> <!--Agrupa eL contenido del emcabezado de la tabla-->
+            <tr> <!--FILAS - HORIZONTALES-->
+                <th>lunes</th>  <!--TH - Encabezado de tabla-->
+                <th>Martes</th> 
+                <th>Miercoles</th> 
+                <th>Jueves</th> 
+                <th>Viernes</th> 
+            </tr>
+        </thead>
+        <tbody> <!--Se usa para agrupar el CONTENIDO del CUERPO en una tabla-->
+            <tr>
+                <!--ROWSPAN: Especifica el numero de filas que debe abarcar una celda-->
+                <td rowspan="2">HTML</td> <!-- TABLE DATA -->
+                <td>PHP</td>
+                <td>CSS</td>
+                <td rowspan="2">JavaScript</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>Go</td>
+                <td>Big Data</td>
+                <td>Diseño UX</td>
+            </tr>
+            <tr>
+                <!--COLSPAN: Define el numero de columnas que quieres abarcar en celdas -->
+                <td colspan="5">Descanso</td> 
+            </tr>
+            <tr>
+                <td>JAVA</td> <!-- TABLE DATA -->
+                <td>SQL</td>
+                <td>Algoritmos</td>
+                <td>Angular</td>
+                <td>PWA</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--Para concluir - un pie de pagina - un resume-->
+            <tr style="background: greenyellow;"> <!--Estilos -css-->
+            <td>6 Creditos</td>
+            <td>8 Creditos</td>
+            <td>5 Creditos</td>
+            <td>3 Creditos</td>
+            <td>1 Creditos</td>
+            </tr> 
+        </tfoot>  
+    </table>
+</body>
+</html>
