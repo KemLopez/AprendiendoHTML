@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>FORMULARIOS</h1>
+    <form> <!--Define un formulario.-->
+
+        <!--Cuando tengo un formulario muy grande puedo utilizar FIELDSET, lo que hace es que agrupa elementos relacionados en un formulario y dibuja un cuadro alrededor de esos elementos seleccionados-->
+        <fieldset>
+            <legend>Tus datos personales</legend> <!--Define un titulo para el elemento FIELDSET-->
+            <div>
+                <!--La etiqute label define una etiqueta para varios elementos-->
+                <label for="nombre">Ingrese su nombre de usuario</label>  <!--FOR: Especifica a qué elemento de formulario está vinculada una etiqueta. ejemplo: nombre-->
+
+                <!--Especifica un campo de entrada donde el usuario puede ingresar datos, se puede mostrar de varias maneras, dependiendo del tipo de atributo-->
+                <input name="username" id="nombre" required> <!--El atributo REQUIRED se utiliza para cuando queremos que ese campo sea OBLIGATORIO-->
+            </div>
+            
+            <div>
+                <!--PLACEHOLDER: Pone mi texto en el input, osea dentro del cuadro, para no tener que escribirlo aparte.-->
+                <input type="email" name="email" placeholder="Ingrese su Email" required> <!--El atributo REQUIRED se utiliza para cuando queremos que ese campo sea OBLIGATORIO-->
+            </div>
+            <!--<div>
+                <label for="email">Ingrese su E-mail</label>
+                <input type="email">  *Solo para Emails*
+            </div> -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Tus datos en la plataforma</legend>
+            <div>
+                <label for="Fnacimiento">Ingresa su fecha de nacimiento</label>
+                <!--DATE: Solo para fechas-->
+                <input type="date" required> <!--El atributo REQUIRED se utiliza para cuando queremos que ese campo sea OBLIGATORIO-->
+            </div>
+    
+            <div>
+                <label for="cantidad">Ingrese la cantidad de bombones que quieres comprar</label>
+                <!--NUMBER: Selecionar cantidades-->
+                <input type="number" value="5" readonly> <!--READONLY: Esecifica que un campo de entrada es solo lectura-->
+            </div>
+    
+            <div>
+                <label for="contraseña">Ingrese su contraseña</label>
+            <input type="password" name="password" id="contraseña" required> <!--El atributo REQUIRED se utiliza para cuando queremos que ese campo sea OBLIGATORIO-->
+            </div>        
+        </fieldset>
+
+        <fieldset>
+            <legend>Tus pasatiempos</legend>
+            <div>
+                <!--El inpunt de tipo CHECKBOX se utiliza para opciones multiples-->
+                <input type="checkbox" name="pasatiempo1">
+                <label for="">Futbol</label>
+
+                <input type="checkbox" name="pasatiempo2">
+                <label for="">Leer</label>
+
+
+                <input type="checkbox" name="pasatiempo3">
+                <label for="">Baloncesto</label>
+
+
+                <input type="checkbox" name="pasatiempo4">
+                <label for="">Escuchar musica</label>
+
+                <input type="checkbox" name="pasatiempo5">
+                <label for="">Escribir</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tu genero</legend>
+            <!--El inpunt de tipo RADIO se utiliza para una uica opcion-->
+            <input type="radio" name="genero">
+                <label for="">Mujer</label>
+
+                <input type="radio" name="genero">
+                <label for="">Hombre</label>
+
+                <input type="radio" name="genero">
+                <label for="">Prefiero no decirlo</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pais</legend>
+            <label for="country">Elige tu pais</label>
+
+            <!--El elemento SELECT se usa para hacer una lista desplegable-->
+            <select name="country" id="country" multiple required> <!--El atributo REQUIRED se utiliza para cuando queremos que ese campo sea OBLIGATORIO-->
+
+                <!--OPTGROUP: Se usa para agrupar opciones relacionadas en un elento <select>-->
+                <optgroup label="America">
+
+                    <!--OPTION: Define una opcion en una lista de selección <select>.-->
+                    <option value="Perú">Perú</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                </optgroup>
+                <optgroup label="Europa">
+
+                    <!--OPTION: Define una opcion en una lista de selección <select>.-->
+                    <option value="Italia">Italia</option>
+                    <option value="España">España</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Grecia">Grecia</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensaje</legend>
+            <div>
+                <!--La etiqueta TEXTAREA se utiliza para entrada de texto de varias lineas - mensajes muy largos-->
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+        </fieldset>
+        <input type="submit" value="Iniciar Sesion"> <!--VALUE: Especifica el valor de un elemento input-->
+    </form>
+</body>
+</html>
